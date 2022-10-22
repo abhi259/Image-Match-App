@@ -1,0 +1,21 @@
+.logo {
+  height: 50px;
+  width: 200px;
+}
+.navbar-wrapper {
+  display: flex;
+  justify-content: space-between;
+  background-color: #2c0e3a;
+  color: white;
+  align-items: center;
+  padding: 10px;
+}
+.navbar-inner-right {
+  display: flex;
+  align-items: center;
+  margin: 5px;
+}
+.clock-size {
+  height: 30px;
+  width: 30px;
+}
