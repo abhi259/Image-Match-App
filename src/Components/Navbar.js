@@ -1,16 +1,16 @@
-import "./Navbar.css"
+import './Navbar.css'
 
-export default function Navbar({ score, timer }) {
+export default function Navbar({score, timer}) {
   return (
-    <div className="navbar-wrapper">
-      <div>
+    <ul className="navbar-wrapper">
+      <li>
         <img
           src="https://assets.ccbp.in/frontend/react-js/match-game-website-logo.png"
           alt="website logo"
           className="logo"
         />
-      </div>
-      <div className="navbar-inner-right">
+      </li>
+      <li className="navbar-inner-right">
         <p>{`Score: ${score}`}</p>
         <div className="navbar-inner-right">
           <img
@@ -20,7 +20,7 @@ export default function Navbar({ score, timer }) {
           />
           <p>{`${timer} sec`}</p>
         </div>
-      </div>
-    </div>
+      </li>
+    </ul>
   )
 }

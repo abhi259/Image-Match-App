@@ -6,7 +6,7 @@ export default function Body({
   imagesList,
   setScore,
   setTimer,
-  score,
+
   timer,
   showResult,
   setShowResult,
@@ -48,37 +48,42 @@ export default function Body({
       <div>
         <img
           src={imagesList[randomNumber].imageUrl}
-          alt="category"
+          alt="match"
           className="main-image"
         />
       </div>
-      <div className="selector">
+      <ul className="selector">
         {tabsList.map((eachItem) => (
-          <button
-            type="button"
-            key={eachItem.tabId}
-            id={eachItem.tabId}
-            onClick={() => onCategorySelection(eachItem)}
-          >
-            {eachItem.displayText}
-          </button>
+          <li>
+            <button
+              type="button"
+              key={eachItem.tabId}
+              id={eachItem.tabId}
+              onClick={() => onCategorySelection(eachItem)}
+            >
+              {eachItem.displayText}
+            </button>
+          </li>
         ))}
-      </div>
-      <div className="thumbnails-container">
+      </ul>
+      <ul className="thumbnails-container">
         {updatedImagesList.map((eachItem) => (
-          <button
-            key={eachItem.id}
-            id={eachItem.id}
-            onClick={() => onThumbnailClick(eachItem)}
-          >
-            <img
-              src={eachItem.thumbnailUrl}
-              alt="thumbnail"
-              className="thumbnail"
-            />
-          </button>
+          <li>
+            <button
+              type="button"
+              key={eachItem.id}
+              id={eachItem.id}
+              onClick={() => onThumbnailClick(eachItem)}
+            >
+              <img
+                src={eachItem.thumbnailUrl}
+                alt="thumbnail"
+                className="thumbnail"
+              />
+            </button>
+          </li>
         ))}
-      </div>
+      </ul>
     </div>
   )
 }
